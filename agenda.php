@@ -28,18 +28,6 @@ try {
     return $pessoas;
   });
 
-  $app->post('/exemplo', function() use ($app) {
-    $nome = $app->request()->getBody();
-    echo "Hello $nome";
-  });
-  $app->put('/exemplo', function() use ($app){
-    $nome = $app->request()->getBody();
-    echo "Tudo bem $nome?";
-  });
-  $app->delete('/exemplo', function() use ($app){
-    $nome = $app->request()->getBody();
-    echo "Tchau $nome";
-  });
   $app->run();
 
 }catch (\Exception $e){
